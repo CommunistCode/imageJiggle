@@ -11,8 +11,6 @@
 
 		function __construct($path) {
 
-			ini_set("memory_limit","600M");	
-			
 			if (file_exists($path)) {
 
 				if (!$imageInfo = getimagesize($path)) {
