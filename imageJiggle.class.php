@@ -8,6 +8,7 @@
 		private $originalHeight;		
 		private $newHeight;
 		private $newWidth;
+		private $mimeType;
 
 		function __construct($path) {
 
@@ -48,10 +49,17 @@
 			}
 
 			$this->imageInfoArray = $imageInfo;
+			$this->mimeType = $imageInfo['mime'];
 			$this->newWidth = $imageInfo[0];
 			$this->newHeight = $imageInfo[1];
 			$this->originalWidth = $imageInfo[0];
 			$this->originalHeight = $imageInfo[1];
+
+		}
+
+		function getMimeType() {
+
+			return $this->mimeType;
 
 		}
 
